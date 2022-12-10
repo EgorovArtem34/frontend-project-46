@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/EgorovArtem34/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/EgorovArtem34/frontend-project-46/actions)",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/EgorovArtem34/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^9.4.1"
+    "commander": "^9.4.1",
+    "lodash": "^4.17.21"
   }
 }
