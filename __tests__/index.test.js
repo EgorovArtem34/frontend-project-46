@@ -10,11 +10,10 @@ const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 
 const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf8');
 
 const expected = readFile('resultCompareFlat.txt', 'utf8');
-const c = readFileSync(`./__fixtures__/resultCompareFlat.txt`, 'utf8')
 const object1 = getFixturePath('file1.json');
 const object2 = getFixturePath('file2.json');
 
 test('compare flat JSON files', () => {
   const actual = genDiff(object1, object2);
-  expect(actual).toEqual(c);
+  expect(actual).toEqual(expected);
 });
