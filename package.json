@@ -2,13 +2,13 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/EgorovArtem34/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/EgorovArtem34/frontend-project-46/actions)",
+  "description": "Hexlet Frontend project lvl2",
   "main": "src/index.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,11 @@
   "dependencies": {
     "commander": "^9.4.1",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.3.1"
   }
 }
