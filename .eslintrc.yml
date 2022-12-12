@@ -1,3 +1,5 @@
+plugins:
+  - jest
 env:
   node: true
   es2021: true
@@ -10,6 +12,7 @@ parserOptions:
   sourceType: module
 rules: 
    no-console: 0
+   no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
    import/extensions: # FIXME: remove when rule will be adjusted for new nodejs version
     - error
     - ignorePackages
