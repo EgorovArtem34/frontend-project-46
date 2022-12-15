@@ -11,23 +11,23 @@ const stringify = (data, depth) => {
   return ['{', ...lines, `  ${makeIndention(depth)}}`].join('\n');
 };
 
-const stylish = (tree) => {
+const makeStylish = (tree) => {
   const iter = (nodes, depth = 1) => {
     const NodesMap = nodes.map((node) => {
       switch (node.type) {
         case 'added':
-          return `${makeIndention(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
+          return `${makeIndention(depth)}+ ${node.key}: ${stringify(node.value1, depth)}`;
         case 'deleted':
-          return `${makeIndention(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
+          return `${makeIndention(depth)}- ${node.key}: ${stringify(node.value1, depth)}`;
         case 'unchanged':
-          return `${makeIndention(depth)}  ${node.key}: ${stringify(node.value, depth)}`;
+          return `${makeIndention(depth)}  ${node.key}: ${stringify(node.value1, depth)}`;
         case 'changed':
           return [
             `${makeIndention(depth)}- ${node.key}: ${stringify(node.value1, depth)}`,
             `${makeIndention(depth)}+ ${node.key}: ${stringify(node.value2, depth)}`,
           ].join('\n');
         case 'nested':
-          return `${makeIndention(depth)}  ${node.key}: {\n${iter(node.value, depth + 1)}\n  ${makeIndention(depth)}}`;
+          return `${makeIndention(depth)}  ${node.key}: {\n${iter(node.value1, depth + 1)}\n  ${makeIndention(depth)}}`;
         default:
           throw new Error(`Unknown type: '${node.type}'`);
       }
@@ -36,4 +36,4 @@ const stylish = (tree) => {
   };
   return `{\n${iter(tree)}\n}`;
 };
-export default stylish;
+export default makeStylish;
