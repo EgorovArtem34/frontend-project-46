@@ -14,11 +14,11 @@ const fileJson2 = getFixturePath('file2.json');
 const fileYaml1 = getFixturePath('file1.yaml');
 const fileYaml2 = getFixturePath('file2.yaml');
 
-test('compare flat JSON files', () => {
+test('stylish JSON files', () => {
   const actual = genDiff(fileJson1, fileJson2);
   expect(actual).toEqual(expected);
-});
-test('compare flat yaml files', () => {
-  const actual = genDiff(fileYaml1, fileYaml2);
-  expect(actual).toEqual(expected);
+  test('stylish yaml files', () => {
+    const actual = genDiff(fileYaml1, fileYaml2);
+    expect(actual).toEqual(expected);
+  });
 });
