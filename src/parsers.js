@@ -5,7 +5,6 @@ const parser = (contentFile, format) => {
     case '.json':
       return JSON.parse(contentFile);
     case '.yml':
-      return yaml.load(contentFile);
     case '.yaml':
       return yaml.load(contentFile);
     default:
