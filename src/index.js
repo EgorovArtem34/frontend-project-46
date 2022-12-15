@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import * as path from 'path';
 import parser from './parsers.js';
 import genTree from './genTree.js';
-import makeFormatTree from './makeFormatTree.js';
+import makeFormatTree from './formatters/index.js';
 
 const getFileFormat = (filepath) => path.extname(filepath);
 const getContentFile = (filepath) => {
