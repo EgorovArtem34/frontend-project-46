@@ -11,7 +11,7 @@ const genTree = (object1, object2) => {
       return {
         key,
         type: 'added',
-        value: object2[key],
+        value1: object2[key],
       };
     }
 
@@ -19,7 +19,7 @@ const genTree = (object1, object2) => {
       return {
         key,
         type: 'deleted',
-        value: object1[key],
+        value1: object1[key],
       };
     }
 
@@ -27,7 +27,7 @@ const genTree = (object1, object2) => {
       return {
         key,
         type: 'nested',
-        value: genTree(object1[key], object2[key]),
+        value1: genTree(object1[key], object2[key]),
       };
     }
 
@@ -42,7 +42,7 @@ const genTree = (object1, object2) => {
 
     return {
       key,
-      value: object1[key],
+      value1: object1[key],
       type: 'unchanged',
     };
   });
