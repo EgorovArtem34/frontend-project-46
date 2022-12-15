@@ -17,8 +17,8 @@ const fileYaml2 = getFixturePath('file2.yaml');
 test('stylish JSON files', () => {
   const actual = genDiff(fileJson1, fileJson2);
   expect(actual).toEqual(expected);
-  test('stylish yaml files', () => {
-    const actual = genDiff(fileYaml1, fileYaml2);
-    expect(actual).toEqual(expected);
-  });
+});
+test('stylish yaml files', () => {
+  const actual = genDiff(fileYaml1, fileYaml2);
+  expect(actual).toEqual(expected);
 });
