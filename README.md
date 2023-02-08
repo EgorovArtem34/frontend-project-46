@@ -25,8 +25,8 @@ Node.js `v13.0.0` or higher must be installed to use difference calculator.
 Then install:
 1. Clone the repository `git clone https://github.com/EgorovArtem34/frontend-project-lvl46.git`
 2. Go to repository directory `cd frontend-project-lvl46`
-3. install dependencies `make install`
-4. install the package `make link`
+3. Install dependencies `make install`
+4. Install the package `make link`
 ## Usage
 For get help output use `gendiff -h`
 ```shell
